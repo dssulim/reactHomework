@@ -36,3 +36,60 @@
     transform: rotate(360deg);
   }
 }
+
+.Message-hello {
+  color: #70fcb4;
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+}
+
+.Message-input {
+  color: white;
+  background-color: #282c34;
+  box-shadow: 0px 0px 6px 0px #70fcb433;
+  padding: 15px;
+  margin: 5px 0px 5px 0px;
+  border: none;
+  resize: none;
+  width: 435px;
+}
+
+.Message-output {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 800px;
+  margin-top: 5px;
+  font-size: 0.45em;
+  box-shadow: inset 0px 0px 3px 0px #70fcb433;
+  padding: 2px 0 4px 5px;
+}
+
+.Message-output-first {
+  display: flex;
+  justify-content: space-between;
+  color: #63fcb430;
+}
+.Message-output-first span {
+  width: 680px;
+}
+
+.Message-output-author-name {
+  color: #63fcb4;
+}
+
+.Message-output-text {
+  color: #bdc8e0;
+}
+
+.Button {
+  color: white;
+  background-color: #282c34;
+  box-shadow: inset 0px 0px 6px 0px #70fcb433;
+  margin: 5px 0px 5px 0px;
+  border: none;
+  padding: 15px;
+}
