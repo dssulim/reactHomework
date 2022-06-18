@@ -1,12 +1,11 @@
 import React from "react";
-import './Message.css';
 
-function Message({ userName }){
-    console.log({userName});
+function Message({userName}){
+    //console.log({userName}, userName);
     return (
-        <h1 className="Message-hello">
-            Hello, {userName}
-        </h1>
+        <p className="Message-hello">
+            Hello, I'm chat-{ userName.user1 }
+        </p>
     )
 }
 
