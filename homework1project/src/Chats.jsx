@@ -1,11 +1,14 @@
 import React from 'react';
 import {ListItem, ListItemText} from '@mui/material';
+import {Link} from "react-router-dom";
 
+const Chats = ({chat}) => {
 
-const Chats = ({chatName}) => {
     return (
         <ListItem>
-            <ListItemText primary={'chat: ' + chatName}/>
+            <Link to={`/chats/${chat.name}`} style={{textDecoration: 'none', color: 'inherit'}}>
+                <ListItemText primary={'chat: ' + chat.name}/>
+            </Link>
         </ListItem>
     );
 };
