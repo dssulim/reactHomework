@@ -9,6 +9,7 @@ const Layout = () => {
                 <CustomLink to={'/'}>HOME</CustomLink>
                 <CustomLink to={'/chats'}>CHATS</CustomLink>
                 <CustomLink to={'/profile'}>PROFILE</CustomLink>
+                <CustomLink to={'/count'}>COUNT</CustomLink>
             </header>
 
             <main style={{paddingBottom: '165px'}}>

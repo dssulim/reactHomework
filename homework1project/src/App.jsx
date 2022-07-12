@@ -8,6 +8,7 @@ import ChatsPage from "./ChatsPage";
 import ChatPage from "./ChatPage";
 import ProfilePage from "./ProfilePage";
 import PageNotFound from "./PageNotFound";
+import CountPage from "./CountPage";
 
 
 const darkTheme = createTheme({
@@ -15,7 +16,6 @@ const darkTheme = createTheme({
     mode: 'dark',
   },
 });
-
 
 
 function App() {
@@ -29,6 +29,7 @@ function App() {
             <Route path={'/chats'} element={<ChatsPage/>}/>
             <Route path={'/chats/:chatName'} element={<ChatPage/>}/>
             <Route path={'/profile'} element={<ProfilePage/>}/>
+            <Route path={'/count'} element={<CountPage/>}/>
             <Route path={'*'} element={<PageNotFound/>}/>
           </Route>
         </Routes>
