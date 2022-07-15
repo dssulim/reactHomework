@@ -1,14 +1,14 @@
-import './App.css';
+import '../App.css';
 import {Routes, Route} from "react-router-dom";
 import React from "react";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Layout from "./Layout";
-import HomePage from "./HomePage";
-import ChatsPage from "./ChatsPage";
-import ChatPage from "./ChatPage";
-import ProfilePage from "./ProfilePage";
+import HomePage from "./home/HomePage";
+import ChatsPage from "./chats/ChatsPage";
+import ChatPage from "./chats/ChatPage";
+import ProfilePage from "./profile/ProfilePage";
 import PageNotFound from "./PageNotFound";
-import CountPage from "./CountPage";
+import CountPage from "./count/CountPage";
 
 
 const darkTheme = createTheme({
@@ -27,7 +27,7 @@ function App() {
           <Route path={'/'} element={<Layout/>}>
             <Route index element={<HomePage/>}/>
             <Route path={'/chats'} element={<ChatsPage/>}/>
-            <Route path={'/chats/:chatName'} element={<ChatPage/>}/>
+            <Route path={'/chats/:chatId'} element={<ChatPage/>}/>
             <Route path={'/profile'} element={<ProfilePage/>}/>
             <Route path={'/count'} element={<CountPage/>}/>
             <Route path={'*'} element={<PageNotFound/>}/>
