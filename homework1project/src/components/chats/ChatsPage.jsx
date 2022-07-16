@@ -6,9 +6,8 @@ import {getChats} from "../../redux/reducers/chatsReducer/chatsSelector";
 import {CHAT_ADD, CHAT_DELETE} from "../../redux/actionTypes";
 
 const ChatsPage = () => {
-
     const chatList = useSelector(getChats);
-    console.log(chatList);
+    //console.log(chatList);
     //TODO: нужно мемизировать что? если нужно, то что и как именно? пересмотреть лекцию 5.
     // Сейчас при каждом вводимом символе в инпуте появляется этот сонсоль-лог с массивом чатов. Значит компонент рендерится?
     const dispatch = useDispatch();
