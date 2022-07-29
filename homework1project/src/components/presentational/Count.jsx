@@ -1,10 +1,6 @@
 import React from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import {getCount} from "../../redux/reducers/countReducer/countSelector";
 
-const Count = () => {
-    const myCount = useSelector(getCount);
-    const myDispatch = useDispatch();
+const Count = ({myCount, myDispatch}) => {
     return (
         <div>
             CountPage.jsx <br/>

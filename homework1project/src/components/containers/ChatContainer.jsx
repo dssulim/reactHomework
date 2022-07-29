@@ -2,10 +2,10 @@ import React from 'react';
 import {useParams} from "react-router-dom";
 import {useSelector} from "react-redux";
 import {getChats} from "../../redux/reducers/chatsReducer/chatsSelector";
-import Messages from "../Messages";
+import Messages from "../presentational/Messages";
 import PageNotFound from "../PageNotFound";
 
-const ChatPage = () => {
+const ChatContainer = () => {
     const {chatId} = useParams();
     console.log(chatId);
     const chat = useSelector(getChats).filter((item)=> item.id === Number(chatId))[0];
@@ -25,4 +25,4 @@ const ChatPage = () => {
     );
 };
 
-export default ChatPage;
+export default ChatContainer;

@@ -3,12 +3,12 @@ import {Routes, Route} from "react-router-dom";
 import React from "react";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Layout from "./Layout";
-import HomePage from "./home/HomePage";
-import ChatsPage from "./chats/ChatsPage";
-import ChatPage from "./chats/ChatPage";
-import ProfilePage from "./profile/ProfilePage";
+import HomePageContainer from "./containers/HomePageContainer";
+import ChatsListContainer from "./containers/ChatsListContainer";
+import ChatContainer from "./containers/ChatContainer";
+import ProfilePage from "./presentational/ProfilePage";
 import PageNotFound from "./PageNotFound";
-import CountPage from "./count/CountPage";
+import CountPageContainer from "./containers/CountPageContainer";
 
 
 const darkTheme = createTheme({
@@ -25,11 +25,11 @@ function App() {
 
         <Routes>
           <Route path={'/'} element={<Layout/>}>
-            <Route index element={<HomePage/>}/>
-            <Route path={'/chats'} element={<ChatsPage/>}/>
-            <Route path={'/chats/:chatId'} element={<ChatPage/>}/>
+            <Route index element={<HomePageContainer/>}/>
+            <Route path={'/chats'} element={<ChatsListContainer/>}/>
+            <Route path={'/chats/:chatId'} element={<ChatContainer/>}/>
             <Route path={'/profile'} element={<ProfilePage/>}/>
-            <Route path={'/count'} element={<CountPage/>}/>
+            <Route path={'/count'} element={<CountPageContainer/>}/>
             <Route path={'*'} element={<PageNotFound/>}/>
           </Route>
         </Routes>
