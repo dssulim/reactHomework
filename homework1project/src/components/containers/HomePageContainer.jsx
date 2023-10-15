@@ -9,6 +9,7 @@ const HomePageContainer = () => {
     const [botMarker, setBotMarker] = useState(true);
     const refForFocus = useRef(null);
     const random = () => Math.round(Math.random()*1000000);
+
     const handleSubmit = (e)=>{
         e.preventDefault();
         setMessageList(prevState => [...prevState, {id: random(), author: messageAuthor, text: messageText}]);
